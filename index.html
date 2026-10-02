@@ -27,7 +27,7 @@
           <a href="#certifications">Certifications</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a href="#contact" class="button button-small">Contact me</a>
+        <button id="edit-toggle" class="button button-small" type="button">Edit portfolio</button>
       </div>
     </header>
 
@@ -35,9 +35,9 @@
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Computer Science Student • UI/UX Designer • Python Developer</p>
-            <h1>Building creative digital experiences with logic, design, and curiosity.</h1>
-            <p class="lead">
+            <p class="eyebrow" data-edit="hero-tag">Computer Science Student • UI/UX Designer • Python Developer</p>
+            <h1 data-edit="hero-title">Building creative digital experiences with logic, design, and curiosity.</h1>
+            <p class="lead" data-edit="hero-lead">
               Motivated Computer Science student with hands-on experience in UI/UX design,
               Python development, and web technologies. I’m looking to contribute my technical
               skills, analytical thinking, and problem-solving abilities to a dynamic organization.
@@ -47,9 +47,9 @@
               <a href="#contact" class="button button-secondary">Let’s connect</a>
             </div>
             <ul class="mini-stats" aria-label="Key statistics">
-              <li><strong>84%</strong><span>B.Sc CS</span></li>
-              <li><strong>15+</strong><span>Python programs</span></li>
-              <li><strong>10+</strong><span>UI screens</span></li>
+              <li><strong data-edit="stat-one-value">84%</strong><span data-edit="stat-one-label">B.Sc CS</span></li>
+              <li><strong data-edit="stat-two-value">15+</strong><span data-edit="stat-two-label">Python programs</span></li>
+              <li><strong data-edit="stat-three-value">10+</strong><span data-edit="stat-three-label">UI screens</span></li>
             </ul>
           </div>
 
@@ -57,20 +57,24 @@
             <div class="profile-card">
               <div class="badge">Open to opportunities</div>
               <div class="portrait-wrap">
-                <div class="portrait"></div>
+                <div class="portrait" aria-label="Profile photo"></div>
+                <div class="photo-tools">
+                  <label for="profile-photo-input" class="button button-small photo-upload">Change photo</label>
+                  <input id="profile-photo-input" type="file" accept="image/*" hidden />
+                </div>
               </div>
               <div class="profile-meta">
-                <h2>Poojitha V</h2>
-                <p>Computer Science Student</p>
+                <h2 data-edit="profile-name">Poojitha V</h2>
+                <p data-edit="profile-role">Computer Science Student</p>
               </div>
               <div class="metrics">
                 <div>
                   <span>Location</span>
-                  <strong>Coimbatore</strong>
+                  <strong data-edit="profile-location">Coimbatore</strong>
                 </div>
                 <div>
                   <span>Focus</span>
-                  <strong>UI/UX + Web</strong>
+                  <strong data-edit="profile-focus">UI/UX + Web</strong>
                 </div>
               </div>
             </div>
@@ -82,15 +86,15 @@
         <div class="container two-col">
           <div>
             <p class="section-tag">About</p>
-            <h2>Turning ideas into user-friendly experiences.</h2>
+            <h2 data-edit="about-heading">Turning ideas into user-friendly experiences.</h2>
           </div>
           <div>
-            <p>
+            <p data-edit="about-p1">
               I’m a motivated Computer Science student with a strong interest in UI/UX design,
               front-end technologies, and Python-based problem solving. My work combines design
               thinking with practical implementation to create clear, responsive, and engaging digital products.
             </p>
-            <p>
+            <p data-edit="about-p2">
               From creating Figma wireframes and user flows to building responsive web experiences,
               I enjoy learning by doing and contributing to user-focused solutions with a clean technical approach.
             </p>
@@ -106,19 +110,19 @@
           </div>
           <div class="education-grid">
             <article class="info-card">
-              <h3>B.Sc Computer Science</h3>
-              <p>84% • Sri Krishna Adithya College of Arts and Science, Coimbatore</p>
-              <span>Bharathiar University • 2024 – Present</span>
+              <h3 data-edit="edu-title-1">B.Sc Computer Science</h3>
+              <p data-edit="edu-text-1">84% • Sri Krishna Adithya College of Arts and Science, Coimbatore</p>
+              <span data-edit="edu-meta-1">Bharathiar University • 2024 – Present</span>
             </article>
             <article class="info-card">
-              <h3>HSC</h3>
-              <p>69% • St. Mary’s Girls Higher Secondary School, Coimbatore</p>
-              <span>2022 – 2024</span>
+              <h3 data-edit="edu-title-2">HSC</h3>
+              <p data-edit="edu-text-2">69% • St. Mary’s Girls Higher Secondary School, Coimbatore</p>
+              <span data-edit="edu-meta-2">2022 – 2024</span>
             </article>
             <article class="info-card">
-              <h3>SSLC</h3>
-              <p>79.8% • GHSS SundakkaMuthur, Coimbatore</p>
-              <span>2021 – 2022</span>
+              <h3 data-edit="edu-title-3">SSLC</h3>
+              <p data-edit="edu-text-3">79.8% • GHSS SundakkaMuthur, Coimbatore</p>
+              <span data-edit="edu-meta-3">2021 – 2022</span>
             </article>
           </div>
         </div>
@@ -132,28 +136,28 @@
           </div>
           <div class="skills-grid">
             <article class="skill-card">
-              <h3>Languages</h3>
-              <p>Python, HTML, CSS, JavaScript, C, C++, Java (basic)</p>
+              <h3 data-edit="skill-title-1">Languages</h3>
+              <p data-edit="skill-text-1">Python, HTML, CSS, JavaScript, C, C++, Java (basic)</p>
             </article>
             <article class="skill-card">
-              <h3>Design</h3>
-              <p>Figma, wireframing, prototyping, UI design, user flows, responsive design</p>
+              <h3 data-edit="skill-title-2">Design</h3>
+              <p data-edit="skill-text-2">Figma, wireframing, prototyping, UI design, user flows, responsive design</p>
             </article>
             <article class="skill-card">
-              <h3>Tools</h3>
-              <p>VS Code, Git, GitHub, Google AI Studio, n8n, Supabase, Lovable</p>
+              <h3 data-edit="skill-title-3">Tools</h3>
+              <p data-edit="skill-text-3">VS Code, Git, GitHub, Google AI Studio, n8n, Supabase, Lovable</p>
             </article>
             <article class="skill-card">
-              <h3>Databases</h3>
-              <p>MySQL, Supabase, SQL</p>
+              <h3 data-edit="skill-title-4">Databases</h3>
+              <p data-edit="skill-text-4">MySQL, Supabase, SQL</p>
             </article>
             <article class="skill-card">
-              <h3>Concepts</h3>
-              <p>Agile, SDLC, OOP, DBMS, responsive development</p>
+              <h3 data-edit="skill-title-5">Concepts</h3>
+              <p data-edit="skill-text-5">Agile, SDLC, OOP, DBMS, responsive development</p>
             </article>
             <article class="skill-card">
-              <h3>Soft skills</h3>
-              <p>Problem solving, teamwork, time management, adaptability, leadership</p>
+              <h3 data-edit="skill-title-6">Soft skills</h3>
+              <p data-edit="skill-text-6">Problem solving, teamwork, time management, adaptability, leadership</p>
             </article>
           </div>
         </div>
@@ -168,19 +172,19 @@
 
           <div class="timeline">
             <div class="timeline-item">
-              <span class="timeline-year">03/2026 - 04/2026</span>
+              <span class="timeline-year" data-edit="internship-date-1">03/2026 - 04/2026</span>
               <div>
-                <h3>UI/UX Design Intern</h3>
-                <p><strong>Cognifyz Technologies</strong></p>
-                <p>Designed 10+ UI screens and interactive prototypes in Figma, created wireframes and user flows, and contributed to responsive, user-friendly web application designs.</p>
+                <h3 data-edit="internship-title-1">UI/UX Design Intern</h3>
+                <p><strong data-edit="internship-company-1">Cognifyz Technologies</strong></p>
+                <p data-edit="internship-desc-1">Designed 10+ UI screens and interactive prototypes in Figma, created wireframes and user flows, and contributed to responsive, user-friendly web application designs.</p>
               </div>
             </div>
             <div class="timeline-item">
-              <span class="timeline-year">05/2026 - 06/2026</span>
+              <span class="timeline-year" data-edit="internship-date-2">05/2026 - 06/2026</span>
               <div>
-                <h3>Python Development Intern</h3>
-                <p><strong>Sysslan IT Solutions</strong></p>
-                <p>Developed 15+ Python programs using core concepts, completed project tasks focused on functions and file handling, and documented project outcomes through a final demo.</p>
+                <h3 data-edit="internship-title-2">Python Development Intern</h3>
+                <p><strong data-edit="internship-company-2">Sysslan IT Solutions</strong></p>
+                <p data-edit="internship-desc-2">Developed 15+ Python programs using core concepts, completed project tasks focused on functions and file handling, and documented project outcomes through a final demo.</p>
               </div>
             </div>
           </div>
@@ -198,9 +202,9 @@
             <article class="project-card">
               <div class="project-visual project-one"></div>
               <div class="project-content">
-                <span class="project-label">MVP Web Application</span>
-                <h3>Tech: Lovable, Supabase, Leonardo AI</h3>
-                <p>
+                <span class="project-label" data-edit="project-label-1">MVP Web Application</span>
+                <h3 data-edit="project-title-1">Tech: Lovable, Supabase, Leonardo AI</h3>
+                <p data-edit="project-desc-1">
                   Built and launched a full-stack MVP web application integrating AI-generated
                   assets and a Supabase real-time database, achieving end-to-end deployment in a two-day sprint.
                 </p>
@@ -210,9 +214,9 @@
             <article class="project-card">
               <div class="project-visual project-two"></div>
               <div class="project-content">
-                <span class="project-label">Python Programming Suite</span>
-                <h3>Tech: Python</h3>
-                <p>
+                <span class="project-label" data-edit="project-label-2">Python Programming Suite</span>
+                <h3 data-edit="project-title-2">Tech: Python</h3>
+                <p data-edit="project-desc-2">
                   Developed 15+ Python programs covering list operations, pattern printing, and
                   function-based logic while demonstrating structured, beginner-friendly problem solving.
                 </p>
@@ -229,11 +233,11 @@
             <h2>Learning milestones.</h2>
           </div>
           <ul class="cert-list">
-            <li>Front End Development – Naan Mudhalvan Scheme (TNSDC / Oracle)</li>
-            <li>Building Your Own Static Website – NxtWave Academy</li>
-            <li>Introduction to Databases – NxtWave Academy</li>
-            <li>UI/UX Design Internship Certificate – Cognifyz Technologies</li>
-            <li>Python Internship Certificate – Sysslan IT Solutions</li>
+            <li data-edit="cert-1">Front End Development – Naan Mudhalvan Scheme (TNSDC / Oracle)</li>
+            <li data-edit="cert-2">Building Your Own Static Website – NxtWave Academy</li>
+            <li data-edit="cert-3">Introduction to Databases – NxtWave Academy</li>
+            <li data-edit="cert-4">UI/UX Design Internship Certificate – Cognifyz Technologies</li>
+            <li data-edit="cert-5">Python Internship Certificate – Sysslan IT Solutions</li>
           </ul>
         </div>
       </section>
@@ -245,8 +249,8 @@
             <h2>Steady growth beyond academics.</h2>
           </div>
           <ul class="achievement-list">
-            <li>Regular LinkedIn contributor sharing certifications, project milestones, and technology insights.</li>
-            <li>Chess player with participation in university-level tournaments and intra-college competitions.</li>
+            <li data-edit="achievement-1">Regular LinkedIn contributor sharing certifications, project milestones, and technology insights.</li>
+            <li data-edit="achievement-2">Chess player with participation in university-level tournaments and intra-college competitions.</li>
           </ul>
         </div>
       </section>
@@ -259,12 +263,12 @@
           <h2>Available for internship and entry-level opportunities.</h2>
         </div>
         <div class="contact-links">
-          <a href="mailto:poojithavelu2007@gmail.com">poojithavelu2007@gmail.com</a>
-          <a href="https://linkedin.com/in/poojitha-v007" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="mailto:poojithavelu2007@gmail.com" data-edit="contact-email">poojithavelu2007@gmail.com</a>
+          <a href="https://linkedin.com/in/poojitha-v007" target="_blank" rel="noreferrer" data-edit="contact-linkedin">LinkedIn</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" data-edit="contact-github">GitHub</a>
         </div>
       </div>
-      <p class="copyright">© <span id="year"></span> Poojitha V. All rights reserved.</p>
+      <p class="copyright">© <span id="year"></span> <span data-edit="footer-name">Poojitha V</span>. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
